@@ -32,8 +32,12 @@ def convert_gif_to_mp4(
     command = [
         binary,
         "-y",
+        "-loglevel",
+        "error",
         "-i",
         str(source),
+        "-vf",
+        "scale=trunc(iw/2)*2:trunc(ih/2)*2",
         "-movflags",
         "+faststart",
         "-pix_fmt",

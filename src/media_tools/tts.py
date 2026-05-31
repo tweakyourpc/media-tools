@@ -19,8 +19,8 @@ class SpeechResult:
 def normalize_text(text: str) -> str:
     text = text.replace("\r\n", " ").replace("\n", " ")
     text = text.replace("…", ".")
-    text = re.sub(r"\s*\.\s*", ". ", text)
     text = re.sub(r"\.{2,}", ". ", text)
+    text = re.sub(r"\s*\.\s*", ". ", text)
     text = re.sub(r"\s{2,}", " ", text).strip()
     return text
 
