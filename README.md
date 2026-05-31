@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/media-tools-hero.png" alt="Media Tools hero image showing audio, video, and text workflows converging into a command-line media utility" width="100%">
+  <img src="https://raw.githubusercontent.com/tweakyourpc/media-tools/main/assets/media-tools-hero.png" alt="Media Tools hero image showing audio, video, and text workflows converging into a command-line media utility" width="100%">
 </p>
 
 # Media Tools
