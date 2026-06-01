@@ -32,7 +32,7 @@ Windows PowerShell:
 
 These commands create `.venv`, install the Python package and dependencies, optionally install `ffmpeg`, and optionally download the default Piper voice files.
 
-For more install options, see [docs/INSTALLATION.md](docs/INSTALLATION.md).
+For more install options, see [docs/INSTALLATION.md](https://github.com/tweakyourpc/media-tools/blob/main/docs/INSTALLATION.md).
 
 ## Quick Start
 
@@ -99,7 +99,7 @@ Useful options:
 media-tools speak narration.txt --voice en_US-lessac-high --output-dir audio
 ```
 
-More examples are in [docs/USAGE.md](docs/USAGE.md).
+More examples are in  [docs/USAGE.md](https://github.com/tweakyourpc/media-tools/blob/main/docs/USAGE.md).
 
 ## Requirements
 
@@ -126,10 +126,10 @@ You can override this with `MEDIA_TOOLS_PIPER_VOICE_DIR`, `--voice-dir`, or `--m
 
 ## Documentation
 
-- [Installation](docs/INSTALLATION.md)
-- [Usage](docs/USAGE.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
-- [Publishing checklist](docs/PUBLISHING.md)
+- [Installation](https://github.com/tweakyourpc/media-tools/blob/main/docs/INSTALLATION.md)
+- [Usage](https://github.com/tweakyourpc/media-tools/blob/main/docs/USAGE.md)
+- [Troubleshooting](https://github.com/tweakyourpc/media-tools/blob/main/docs/TROUBLESHOOTING.md)
+- [Publishing checklist](https://github.com/tweakyourpc/media-tools/blob/main/docs/PUBLISHING.md)
 
 ## Development
 
@@ -149,4 +149,4 @@ Project layout:
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/tweakyourpc/media-tools/blob/main/LICENSE).

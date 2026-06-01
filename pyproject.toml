@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "voxreel"
-version = "0.1.2"
-description = "Transcribe audio, convert GIFs to MP4, and speak text - one cross-platform CLI"
+version = "0.1.3"
+description = "Platform-neutral media tooling for transcription, GIF conversion, and Piper text-to-speech"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.10"
 license = {text = "MIT"}
