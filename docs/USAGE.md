@@ -49,7 +49,7 @@ Options:
 
 ```bash
 media-tools gif-to-mp4 animation.gif --output-dir converted
-media-tools gif-to-mp4 animation.gif --ffmpeg /path/to/ffmpeg
+media-tools gif-to-mp4 animation.gif --ffmpeg ffmpeg
 ```
 
 The conversion uses `-movflags +faststart` and `-pix_fmt yuv420p` so the output is broadly compatible with browsers and social platforms.

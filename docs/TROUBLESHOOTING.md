@@ -18,10 +18,10 @@ scripts/setup.sh --install-system-deps
 .\scripts\setup.ps1 -InstallSystemDeps
 ```
 
-You can also pass a direct executable path:
+Media Tools rejects direct executable paths for `--ffmpeg` to avoid executing untrusted path input. Install `ffmpeg` on `PATH`, then use the default or pass the command name:
 
 ```bash
-media-tools gif-to-mp4 clip.gif --ffmpeg /path/to/ffmpeg
+media-tools gif-to-mp4 clip.gif --ffmpeg ffmpeg
 ```
 
 ## Piper model not found

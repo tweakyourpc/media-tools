@@ -32,7 +32,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     convert = subparsers.add_parser("gif-to-mp4", help="Convert GIF files to MP4")
     convert.add_argument("files", nargs="+", help="Input GIF files")
-    convert.add_argument("--ffmpeg", default="ffmpeg", help="ffmpeg executable or path")
+    convert.add_argument("--ffmpeg", default="ffmpeg", help="ffmpeg command name on PATH; paths are rejected")
     convert.add_argument("--output-dir", default=None, help="Write outputs to this directory")
 
     return parser

@@ -18,6 +18,9 @@ class MediaToolsTests(unittest.TestCase):
     def test_normalize_text_collapses_runs_of_dots(self) -> None:
         self.assertEqual(normalize_text("Hello...   World…"), "Hello. World.")
 
+    def test_normalize_text_preserves_decimal_points(self) -> None:
+        self.assertEqual(normalize_text("Set speed to 1.25x."), "Set speed to 1.25x.")
+
     def test_format_timestamp(self) -> None:
         self.assertEqual(format_timestamp(3723.456), "01:02:03.456")
 
@@ -33,6 +36,22 @@ class MediaToolsTests(unittest.TestCase):
 
             self.assertEqual(resolved_model, model)
             self.assertEqual(resolved_config, config)
+
+    def test_gif_conversion_rejects_ffmpeg_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / "clip.gif"
+            source.write_bytes(b"GIF89a")
+
+            with self.assertRaisesRegex(ValueError, "not a path"):
+                convert_gif_to_mp4(source, ffmpeg="/tmp/evil-ffmpeg")
+
+    def test_gif_conversion_rejects_non_ffmpeg_command(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / "clip.gif"
+            source.write_bytes(b"GIF89a")
+
+            with self.assertRaisesRegex(ValueError, "must be 'ffmpeg'"):
+                convert_gif_to_mp4(source, ffmpeg="evil-ffmpeg")
 
     def test_gif_conversion_uses_quiet_even_dimension_ffmpeg_args(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
